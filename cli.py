@@ -2,7 +2,7 @@
 import click
 import requests
 
-API_BASE_URL = "http://10.3.125.248:4000"  
+API_BASE_URL = "http://localhost:8000" 
 
 @click.command()
 @click.argument('endpoint', type=click.Choice(['md5', 'factorial', 'fibonacci', 'is-prime', 'slack-alert', 'keyval']))
