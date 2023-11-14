@@ -8,7 +8,7 @@ API_BASE_URL = "http://localhost:8000"
 @click.argument('endpoint', type=click.Choice(['md5', 'factorial', 'fibonacci', 'is-prime', 'slack-alert', 'keyval']))
 @click.argument('params', nargs=-1)
 def main(endpoint, params):
-    """Command line interface for interacting with the REST API."""
+    """CLI for controlling the API."""
     url = f"{API_BASE_URL}/{endpoint}/{'/'.join(params)}"
     response = requests.get(url)
 
